@@ -11,7 +11,7 @@ contract Ownable {
     //  1) create a private '_owner' variable of type address with a public getter function
     address private _owner;
 
-    function getOwner() public returns (address) {
+    function getOwner() public view returns (address) {
       return _owner;
     }
     //  2) create an internal constructor that sets the _owner var to the creater of the contract
@@ -531,19 +531,36 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
         // see https://github.com/oraclize/ethereum-api/blob/master/oraclizeAPI_0.5.sol for strConcat()
     // require the token exists before setting
 
-    function setTokenURI(string memory baseTokenURI, uint256 tokenId) internal {
+    function setTokenURI(uint256 tokenId) internal {
       require(_exists(tokenId), "The token does not exist.");
-      string memory _tokenURI = strConcat(baseTokenURI, uint2str(tokenId));
+      string memory _tokenURI = strConcat(_baseTokenURI, uint2str(tokenId));
       _tokenURIs[tokenId] = _tokenURI;
     }
 
 }
 
-//  TODO's: Create CustomERC721Token contract that inherits from the ERC721Metadata contract. You can name this contract as you please
-//  1) Pass in appropriate values for the inherited ERC721Metadata contract
-//      - make the base token uri: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/
-//  2) create a public mint() that does the following:
-//      -can only be executed by the contract owner
-//      -takes in a 'to' address, tokenId, and tokenURI as parameters
-//      -returns a true boolean upon completion of the function
-//      -calls the superclass mint and setTokenURI functions
+//  Create CustomERC721Token contract that inherits from the ERC721Metadata contract. You can name this contract as you please
+contract ERC721MintableComplete is ERC721Metadata {
+
+  //  1) Pass in appropriate values for the inherited ERC721Metadata contract
+  //      - make the base token uri: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/
+  constructor () ERC721Metadata("Custom Real Estate Token", "CRE", "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/") public {
+
+  }
+
+  //  2) create a public mint() that does the following:
+  //      -can only be executed by the contract owner
+  //      -takes in a 'to' address, tokenId, and tokenURI as parameters -- Removing tokenURI as the baseURI is set on the constructor of ERC721Metadata
+  //      -returns a true boolean upon completion of the function
+  //      -calls the superclass mint and setTokenURI functions
+  function mint(address to, uint256 tokenId) public onlyOwner returns(bool){
+
+    super._mint(to, tokenId);
+    super.setTokenURI(tokenId);
+
+    return true;
+  }
+
+
+
+}
