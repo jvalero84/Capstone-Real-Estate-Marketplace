@@ -91,6 +91,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# Internal notes
+docker-zokrates-command.txt
+
 ~$*.pptx
 Footer
 © 2022 GitHub, Inc.
