@@ -1,6 +1,7 @@
 pragma solidity >=0.4.21 <0.6.0;
 
 import "./ERC721Mintable.sol";
+import "./verifier.sol";
 
 // TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>
 
@@ -126,6 +127,6 @@ contract SolnSquareVerifier is ERC721MintableComplete {
 
 
 
-contract Verifier {
+/*contract Verifier {
   function verifyTx(uint[2] memory a, uint[2][2] memory b, uint[2] memory c, uint[2] memory input) public returns (bool);
-}
+}*/
