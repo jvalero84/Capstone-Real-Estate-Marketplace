@@ -10,7 +10,6 @@ jvalero84
 /
 block4_flight_surety
 Public
-Code
 Issues
 Pull requests
 Actions
@@ -93,6 +92,11 @@ typings/
 
 # Internal notes
 docker-zokrates-command.txt
+
+#mint script
+mint_tokens_rinkeby.js
+mint_tokens_creatures_rinkeby.js
+
 
 ~$*.pptx
 Footer
