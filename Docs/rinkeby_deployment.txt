@@ -1,0 +1,57 @@
+2_deploy_contracts.js
+=====================
+
+   Deploying 'Verifier'
+   --------------------
+   > transaction hash:    0xec4fbbe8394c2b06210310fa94419abe853abab1e476e65d7e5f0a4bd373c882
+   > Blocks: 0            Seconds: 8
+   > contract address:    0xACad44732DC9e32f5e8F74eFE75dBD3599693931
+   > block number:        11306375
+   > block timestamp:     1662063561
+   > account:             0x765A6B5fB4aBE2381bC2Be4928F3D09C978dc5BB
+   > balance:             0.789283935431335731
+   > gas used:            977790
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0097779 ETH
+
+
+   Deploying 'SolnSquareVerifier'
+   ------------------------------
+   > transaction hash:    0xab16f15d77f1c69ba951cc95d6f3fb6831f959e2a2044fed8f3ef8783bb1ab05
+   > Blocks: 1            Seconds: 12
+   > contract address:    0x45460513d9352c9216E67d5aCedc1E531414C697
+   > block number:        11306376
+   > block timestamp:     1662063576
+   > account:             0x765A6B5fB4aBE2381bC2Be4928F3D09C978dc5BB
+   > balance:             0.754584125431335731
+   > gas used:            3469981
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.03469981 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.04447771 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.04674308 ETH
+
+
+// Minting tokens...
+
+Minted Token. Transaction: 0x4225072bf35c75a5bf5493d3fa0fc1f7d31d9248cfa18c03bed5ebda655dd042
+Minted Token. Transaction: 0xbbd02748832eb5fe50a275dc51209941a745689973b16b30723d6c7da1b72b55
+Minted Token. Transaction: 0xccb3101cb268474e745790a05b368bb9d82741d341f7851415e2a3a6fe51f4ea
+Minted Token. Transaction: 0x57b01f637ba0d6bd82dfe9e87251403ba43a49d5fc4c96f849c32a343fd59e42
+Minted Token. Transaction: 0x04dcaa608efa213a0c52823ff192e15a8ee8ff0edd24a83e224008b009fd3169
+Minted Token. Transaction: 0x396dfd40c94a0814dcbf041640289e1af9b99b33c9c6bca60bde68eb6234db1b
+Minted Token. Transaction: 0x89d880983371ea715af860b63269e550d775b8b5c8a5019fc403bae030934e84
+Minted Token. Transaction: 0x86ea60452abd6a9ebcffa1d38e7c59fda66248aa480c7350d8fd6494a146501c
+Minted Token. Transaction: 0x8429107e0921f8702fe823af663964c37f9ba76e906736b41710c39515acbe29
+Minted Token. Transaction: 0x40ddde085491301efe2d92011bc9ddfd6c47f3579299833ce03f2d365ac5767c
