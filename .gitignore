@@ -95,7 +95,6 @@ docker-zokrates-command.txt
 
 #mint script
 mint_tokens_rinkeby.js
-mint_tokens_creatures_rinkeby.js
 
 
 ~$*.pptx

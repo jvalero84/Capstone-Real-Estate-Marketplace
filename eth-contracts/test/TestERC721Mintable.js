@@ -62,7 +62,7 @@ contract('TestERC721Mintable', accounts => {
           try{
             await this.contract.mint(account_three, 1, {from: account_two});
           } catch(e) {
-            console.log(e); //Expected failure when trying to mint a token from an address that is not the contract owner.
+            //console.log(e); //Expected failure when trying to mint a token from an address that is not the contract owner.
           }
         })
 

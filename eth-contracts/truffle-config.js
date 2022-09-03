@@ -17,7 +17,11 @@
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
- var mnemonic = "want hurt lion stick visa fame dog come speed cruise tragic lunar";
+
+ const HDWalletProvider = require('truffle-hdwallet-provider');
+ const infuraKey = "Your infura key goes here";
+
+ var mnemonic = "Your metamask mnemonic goes here";
 
 // const HDWalletProvider = require('truffle-hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
@@ -49,6 +53,14 @@ module.exports = {
           network_id: "*", // Match any network id
           gas: 9999999
         },
+        rinkeby: {
+            provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
+             network_id: 4,
+             gas: 4500000,
+             gasPrice: 10000000000,
+             // confirmations: 2,
+             skipDryRun: true
+    },
 
     // Another network with more advanced options...
     // advanced: {
